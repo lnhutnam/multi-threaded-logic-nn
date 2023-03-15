@@ -1,5 +1,4 @@
 import os
-import torch 
 
 class CPUInfer:
     def __init__(self):
