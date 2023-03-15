@@ -53,7 +53,8 @@ class Main:
 if __name__ == "__main__":
     mainth = Main()
 
-    or_model = XOR_Perceptron()
+    or_model = OR_Perceptron()
+
     or_model_cu = XOR_Perceptron(device='gpu')
 
     cpu_model_list = [or_model]
@@ -68,6 +69,7 @@ if __name__ == "__main__":
 
     for item in data:
         pred = mainth.run(item, cpu_model_list, gpu_model_list)
+        print(pred)
 
     # print("or(1, 1) = {}".format(perceptron_or(x=[1, 1], w=w_or[1:3], b=w_or[0]))) # 1
     # print("or(1, 0) = {}".format(perceptron_or(x=[1, 0], w=w_or[1:3], b=w_or[0]))) # 1
